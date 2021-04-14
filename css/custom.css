@@ -132,7 +132,14 @@ body {
 }
 
 .day {
+  /* so shapes position in relation to our day sections */
+  position: relative;
   text-align: center;
+}
+
+/* makes text appear on top of shapes */
+.day .container {
+  z-index: 2;
 }
 
 .date {
