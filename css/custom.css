@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
   /* display: flex enables flexbox mode */
   display: flex;
+  position: relative;
 }
 
 /* a class that does just one thing and can reuse in different places */
@@ -77,3 +78,39 @@ body {
   /* make sure end state stays the same i.e. text stays on the page */
   animation-fill-mode: forwards;
 }
+
+.marquee {
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  width: 100%;
+  /* each letter will be 5% of viewport width (vw) */
+  font-size: 5vw;
+  line-height: 1;
+  /* stops long text from causing scroll bars */
+  overflow: hidden;
+  /* takes background color and mixes with font colour - like a invert style effect - there are other ones too */
+  mix-blend-mode: difference;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(-3000vw)
+  }
+}
+
+.marquee span {
+  /* this is the shorthand (brief) version of the animation css rule */
+  animation: moveLeft 200s infinite;
+  /* stops text wrap */
+  white-space: nowrap;
+  /* span is inline by default so we tell it to be block */
+  display: block;
+  /* lets us add our animation */
+  position: relative;
+}
+
+.mix-difference

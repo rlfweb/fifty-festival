@@ -14,3 +14,7 @@
     url("lunchtype24-medium-expanded-webfont.woff") format("woff"),
     url("lunchtype24-medium-expanded-webfont.ttf") format("truetype");
 }
+
+.marquee {
+  font-family: "LunchType-Medium";
+}
