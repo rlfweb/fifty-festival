@@ -1,0 +1,79 @@
+body {
+  font-family: "LunchType-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.section {
+  min-height: 100vh;
+  /* display: flex enables flexbox mode */
+  display: flex;
+}
+
+/* a class that does just one thing and can reuse in different places */
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container {
+  max-width: 810px;
+  /* centres box vertically and horizontally */
+  margin: auto;
+}
+
+.intro {
+  background-image: url(/images/intro.jpg);
+  color: #fff;
+}
+
+.intro p {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 112px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* css animations require keyframes and  then using the animation on a class*/
+/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    tranform: translateY(20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  /* opacity here is a starting point */
+  opacity: 0;
+  /* animation name */
+  animation-name: fadeIn;
+  /* set duration and delay */
+  animation-duration: 3s;
+  animation-delay: 2s;
+  /* make sure end state stays the same i.e. text stays on the page */
+  animation-fill-mode: forwards;
+}
