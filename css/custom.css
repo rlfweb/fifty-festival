@@ -6,7 +6,7 @@ body {
 
 .section {
   min-height: 100vh;
-  /* display: flex enables flexbox mode */
+  /* enables flexbox (modern layout mode in css) */
   display: flex;
   position: relative;
 }
@@ -37,9 +37,9 @@ body {
   display: block;
   text-align: center;
   margin-bottom: 32px;
-  max-width: 112px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 112px;
 }
 
 .logo img {
@@ -57,7 +57,7 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    tranform: translateY(20px);
+    transform: translateY(20px);
   }
   50% {
     transform: translate(0);
@@ -89,16 +89,14 @@ body {
   line-height: 1;
   /* stops long text from causing scroll bars */
   overflow: hidden;
-  /* takes background color and mixes with font colour - like a invert style effect - there are other ones too */
-  mix-blend-mode: difference;
 }
 
 @keyframes moveLeft {
   0% {
-    transform: translateX(0)
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-3000vw)
+    transform: translateX(-3000vw);
   }
 }
 
@@ -113,4 +111,7 @@ body {
   position: relative;
 }
 
-.mix-difference
+.mix-difference {
+  /* takes background color and mixes with font colour - like a invert style effect - there are other ones too */
+  mix-blend-mode: difference;
+}
