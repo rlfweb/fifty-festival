@@ -15,6 +15,9 @@
     url("lunchtype24-medium-expanded-webfont.ttf") format("truetype");
 }
 
-.marquee {
+.marquee,
+.lunch-medium,
+.date,
+.lineup h1 {
   font-family: "LunchType-Medium";
 }
