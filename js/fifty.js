@@ -76,6 +76,8 @@ squiggles.forEach((squiggle, index) => {
   );
 });
 
+// FADE IN SINGERS' NAMES AND SHAPES WHEN SECTION ENTERS VIEWPORT
+
 // Adds a class of 'in-viewport', when a section enters the view
 // and removes the class when the section exist the viewport
 inView(".section")
@@ -106,5 +108,22 @@ sections.forEach((section, index) => {
   shapes.forEach((shape, index) => {
     const delay = (singers.length + index) * 100;
     shape.style.transitionDelay = delay + "ms";
+  });
+});
+
+// SMOOTH SCROLL EFFECT FOR ARROW LINKS
+// addEventListener is the same as jquery's .on()
+const scrollLinks = document.querySelectorAll(".js-scroll");
+
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    // prevents it defaulting to a sudden move to the section - same as jquery 'return false'
+    event.preventDefault();
+    // grab href attribute from our link
+    const href = link.getAttribute("href");
+    // scroll into view smoothly
+    document.querySelector(href).scrollIntoView({
+      behavior: "smooth",
+    });
   });
 });

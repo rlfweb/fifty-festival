@@ -163,3 +163,20 @@ body {
 .lineup li {
   margin-bottom: 24px;
 }
+
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  width: 64px;
+  height: 32px;
+  background-image: url(/images/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateX(-50%);
+}
+
+.scroll-to-intro {
+  background-image: url(/images/down-arrow-light.svg);
+}
