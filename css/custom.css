@@ -184,3 +184,33 @@ body {
 .scroll-to-intro {
   background-image: url(/images/down-arrow-light.svg);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 640px) {
+  .marquee {
+    /* here we reset our marquee back to its default position */
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 90vw;
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    max-width: 64px;
+    margin-bottom: 24px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  .scroll-to {
+    display: none;
+  }
+
+  .lineup h2 {
+    font-size: 30px;
+  }
+}

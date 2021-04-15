@@ -50,15 +50,21 @@ input {
   background: none;
   border: none;
   font-size: 21px;
+  /* removes default blue line around inputs */
+  outline: none;
 }
 
 .form {
   margin: 48px 24px;
 }
 
-.email-input {
+.js-cm-email-input {
   /* makes the email input take up available space */
   flex: 1;
+}
+
+.submit {
+  cursor: pointer;
 }
 
 .eyes {
