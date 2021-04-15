@@ -135,6 +135,7 @@ body {
   /* so shapes position in relation to our day sections */
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 /* makes text appear on top of shapes */
