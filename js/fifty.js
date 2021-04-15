@@ -29,7 +29,7 @@ const circles = document.querySelectorAll(".circle");
 // circles return us an array so we need to loop through it
 // inside of the forEach we get access to each individual element
 // along with its index number within the array
-circles.forEach(function (circle, index) {
+circles.forEach((circle, index) => {
   // in here we get access to each one as a 'circle'
   circle.animate(
     [
@@ -74,4 +74,37 @@ squiggles.forEach((squiggle, index) => {
       iterations: Infinity,
     }
   );
+});
+
+// Adds a class of 'in-viewport', when a section enters the view
+// and removes the class when the section exist the viewport
+inView(".section")
+  .on("enter", (section) => {
+    section.classList.add("in-viewport");
+  })
+  .on("exit", (section) => {
+    section.classList.remove("in-viewport");
+  });
+
+// set the class to add only once we have scrolled 20% into the viewport
+inView.threshold(0.2);
+
+// select all sections and loop through them
+const sections = document.querySelectorAll(".section");
+
+sections.forEach((section, index) => {
+  // in seach section we want to grab singers' names and shapes
+  const singers = section.querySelectorAll(".lineup li");
+  const shapes = section.querySelectorAll(".shape");
+  // for both of these want to add transition delay effects
+  singers.forEach((singer, index) => {
+    const delay = index * 100;
+    singer.style.transitionDelay = delay + "ms";
+  });
+
+  // make sure shapes only fade in after singers' names
+  shapes.forEach((shape, index) => {
+    const delay = (singers.length + index) * 100;
+    shape.style.transitionDelay = delay + "ms";
+  });
 });
