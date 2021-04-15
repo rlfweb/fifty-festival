@@ -29,3 +29,68 @@
   text-align: center;
   text-decoration: none;
 }
+
+.register .container {
+  display: flex;
+}
+
+.register h2 {
+  font-size: 40px;
+  margin-bottom: 48px;
+  line-height: 1.1;
+}
+
+.sign-up {
+  display: flex;
+  border-bottom: solid 2px #00b290;
+  padding-bottom: 12px;
+}
+
+input {
+  background: none;
+  border: none;
+  font-size: 21px;
+}
+
+.form {
+  margin: 48px 24px;
+}
+
+.email-input {
+  /* makes the email input take up available space */
+  flex: 1;
+}
+
+.eyes {
+  width: 108px;
+  height: 32px;
+  background-image: url(/images/eyes_open.svg);
+}
+
+.hand {
+  width: 57px;
+  height: 89px;
+  background-image: url(/images/ok_hand.svg);
+  /* this aligns image to bottom of its container */
+  align-self: flex-end;
+}
+
+.eyes,
+.hand {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 780px) {
+  .register .container {
+    /* this will stack boxes on top of each other */
+    flex-direction: column;
+  }
+  .register h2 {
+    font-size: 30px;
+  }
+  .form {
+    margin: 24px 0;
+  }
+}
