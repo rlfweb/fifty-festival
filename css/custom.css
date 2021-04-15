@@ -143,6 +143,8 @@ body {
   z-index: 2;
 }
 
+/* TEXT */
+
 .date {
   font-size: 28px;
   color: #ffeed1;
@@ -163,6 +165,8 @@ body {
 .lineup li {
   margin-bottom: 24px;
 }
+
+/* SCROLLING ARROWS */
 
 .scroll-to {
   position: absolute;

@@ -18,6 +18,7 @@
 .marquee,
 .lunch-medium,
 .date,
-.lineup h1 {
+.lineup h2,
+.button {
   font-family: "LunchType-Medium";
 }
